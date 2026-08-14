@@ -1,0 +1,370 @@
+/* ===== RESET E BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f2f4f8;
+    color: #1f2e3f;
+    line-height: 1.6;
+    padding: 2rem 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 8px 28px rgba(0, 20, 30, 0.06);
+    padding: 2.2rem 2.8rem;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* ===== CORES SUAVES E CONTRASTE ===== */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    color: #1d3a57;
+    margin-bottom: 0.2rem;
+}
+
+.subhead {
+    font-size: 1.2rem;
+    color: #2d4b6a;
+    background: #eaf1fa;
+    padding: 0.9rem 1.6rem;
+    border-radius: 60px;
+    display: inline-block;
+    margin-bottom: 1.8rem;
+    border-left: 6px solid #6f9ed8;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 450;
+    color: #1d3a57;
+    margin: 2.2rem 0 1rem 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 3px solid #dee8f2;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #1f3f5c;
+    margin: 1.6rem 0 0.6rem 0;
+}
+
+p, li {
+    font-size: 1.05rem;
+    color: #1f3349;
+}
+
+ul, ol {
+    padding-left: 1.8rem;
+    margin: 0.8rem 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* ===== CARDS COM MAIS ESPAÇO E SUAVIDADE ===== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.8rem;
+    margin: 1.8rem 0;
+}
+
+.card {
+    background: #f7faff;
+    border-radius: 28px;
+    padding: 1.6rem 1.4rem;
+    border: 1px solid #e3ecf6;
+    transition: 0.15s;
+}
+
+.card:hover {
+    background: #eef6fe;
+    border-color: #bbd2e9;
+}
+
+.card .emoji {
+    font-size: 2.6rem;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.card h4 {
+    font-size: 1.1rem;
+    font-weight: 550;
+    color: #15344f;
+}
+
+.card p {
+    font-size: 0.98rem;
+    color: #2a405b;
+    margin-top: 0.2rem;
+}
+
+.highlight-box {
+    background: #e5eff9;
+    border-radius: 28px;
+    padding: 1.8rem 2.2rem;
+    margin: 1.8rem 0;
+    border-left: 8px solid #5b8fc7;
+    font-size: 1.05rem;
+}
+
+.highlight-box strong {
+    color: #0b2d4a;
+}
+
+/* ===== ROTEIRO COM ABAS MAIS LIMPAS ===== */
+.roteiro-wrapper {
+    margin: 2.8rem 0 1.5rem 0;
+    background: #f5f9fe;
+    border-radius: 32px;
+    padding: 0.2rem 0 1.8rem 0;
+}
+
+.roteiro-title {
+    margin: 1rem 0 0.2rem 0;
+    border-bottom: none;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 450;
+}
+
+.roteiro-sub {
+    text-align: center;
+    color: #2f5375;
+    margin-bottom: 0.4rem;
+    font-size: 0.98rem;
+}
+
+.tab-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+    padding: 1rem 1.2rem 0.2rem 1.2rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
+    font-weight: 450;
+    color: #1f3f5e;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: 0.15s;
+    background: #e4edf7;
+    letter-spacing: 0.2px;
+}
+
+.tab-btn:hover {
+    background: #d0deee;
+}
+
+.tab-btn.active {
+    background: #1f4b74;
+    color: white;
+    box-shadow: 0 4px 10px rgba(26, 67, 113, 0.15);
+}
+
+.tab-content {
+    display: none;
+    padding: 1.2rem 2rem 0.6rem 2rem;
+    animation: fade 0.2s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fade {
+    0% { opacity: 0.3; transform: translateY(4px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.tab-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tab-content li {
+    padding: 0.5rem 0 0.5rem 2.4rem;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%234f7ea8" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>') left center no-repeat;
+    background-size: 1.4rem;
+    margin-bottom: 0.1rem;
+}
+
+.tab-content li strong {
+    color: #0e3250;
+}
+
+/* ===== BOTÃO DE TEMA (MODO REDUZIDO) ===== */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.theme-toggle label {
+    font-size: 0.95rem;
+    color: #1f3f5e;
+    font-weight: 450;
+}
+
+.toggle-label {
+    font-size: 0.9rem;
+    color: #3f6180;
+}
+
+.switch {
+    position: relative;
+    width: 50px;
+    height: 26px;
+    background: #ccdbe9;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.25s;
+    border: none;
+    outline: none;
+}
+
+.switch::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.25s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.switch.active {
+    background: #3f7aa8;
+}
+
+.switch.active::after {
+    left: 27px;
+}
+
+/* ===== MODO REDUZIDO (menos estímulos) ===== */
+body.modo-reduzido {
+    background: #e8ecf0;
+}
+
+body.modo-reduzido .container {
+    background: #f9fbfd;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+body.modo-reduzido .card {
+    background: #f4f8fe;
+    border-color: #d2dfec;
+}
+
+body.modo-reduzido .highlight-box {
+    background: #dfeaf5;
+    border-left-color: #4b7daa;
+}
+
+body.modo-reduzido .roteiro-wrapper {
+    background: #eef4fa;
+}
+
+body.modo-reduzido .tab-btn {
+    background: #dce6f0;
+    color: #1a3550;
+}
+
+body.modo-reduzido .tab-btn.active {
+    background: #1a3f62;
+    color: #ffffff;
+}
+
+/* ===== BOTÃO DEMO ===== */
+.btn-demo {
+    display: inline-block;
+    background: #1f4b74;
+    color: white;
+    padding: 0.7rem 2rem;
+    border-radius: 60px;
+    font-weight: 450;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.15s;
+    margin-top: 0.3rem;
+}
+
+.btn-demo:hover {
+    background: #123a5c;
+    transform: scale(1.01);
+}
+
+/* ===== RODAPÉ ===== */
+.footer-note {
+    margin-top: 2.8rem;
+    padding-top: 1.8rem;
+    border-top: 2px solid #dee8f2;
+    font-size: 0.95rem;
+    color: #3d5f7e;
+    text-align: center;
+}
+
+.footer-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.footer-direitos {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.ref-destaque {
+    margin-top: 0.6rem;
+    font-size: 0.98rem;
+    color: #3a5b7a;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 700px) {
+    .container {
+        padding: 1.5rem 1.2rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .tab-btn {
+        font-size: 0.85rem;
+        padding: 0.4rem 1rem;
+    }
+    .tab-content {
+        padding: 0.8rem 0.8rem;
+    }
+    .subhead {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+}

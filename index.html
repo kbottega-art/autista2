@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IncluVid – Plataforma para Autistas</title>
+    <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== CONTROLE DE TEMA ===== -->
+    <div class="theme-toggle">
+        <label for="modoSwitch">🌿 Modo reduzido (menos estímulos)</label>
+        <button class="switch" id="modoSwitch" role="switch" aria-checked="false"></button>
+        <span class="toggle-label">(cores mais suaves, contraste mínimo)</span>
+    </div>
+
+    <!-- ===== CABEÇALHO ===== -->
+    <header>
+        <h1>🧩 IncluVid</h1>
+        <div class="subhead">
+            Plataforma de vídeos desenhada com e para pessoas autistas — inclusão digital real.
+        </div>
+    </header>
+
+    <!-- ===== PROBLEMA E SOLUÇÃO ===== -->
+    <section>
+        <h2>⚡ O problema</h2>
+        <p>
+            A exclusão digital de pessoas autistas vai além do acesso à internet. As plataformas existentes ignoram necessidades sensoriais, cognitivas e de previsibilidade, gerando <strong>sobrecarga, ansiedade e barreiras invisíveis</strong>.
+            Não há um espaço dedicado a vídeos que respeite o ritmo, os interesses e a forma de processar informação do espectro autista.
+        </p>
+
+        <div class="highlight-box">
+            <strong>🎯 Nossa missão:</strong> Criar um aplicativo próprio, com curadoria e interface acessível, que devolva à comunidade autista o prazer de assistir, aprender e se entreter sem obstáculos.
+        </div>
+    </section>
+
+    <!-- ===== DIFERENCIAIS (CARDS) ===== -->
+    <section>
+        <h2>✨ Diferenciais pensados para autistas</h2>
+        <div class="card-grid">
+            <div class="card">
+                <span class="emoji">🧠</span>
+                <h4>Interfaces previsíveis</h4>
+                <p>Navegação fixa, botões grandes e consistentes, sem mudanças bruscas.</p>
+            </div>
+            <div class="card">
+                <span class="emoji">🎚️</span>
+                <h4>Controle sensorial</h4>
+                <p>Opção de reduzir cores, sons e animações. Cada usuário ajusta o ambiente.</p>
+            </div>
+            <div class="card">
+                <span class="emoji">🔁</span>
+                <h4>Repetição e hiperfoco</h4>
+                <p>Playlists inteligentes que sugerem conteúdo relacionado ao interesse fixo.</p>
+            </div>
+            <div class="card">
+                <span class="emoji">📺</span>
+                <h4>Legendagem + áudio descrição</h4>
+                <p>Múltiplas camadas de informação para diferentes perfis de processamento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ROTEIRO DE APRESENTAÇÃO ORAL (ABAS) ===== -->
+    <section class="roteiro-wrapper">
+        <h2 class="roteiro-title">🎤 Roteiro de apresentação oral</h2>
+        <p class="roteiro-sub">
+            Clique nos tópicos para navegar pelos blocos da sua fala
+        </p>
+
+        <div class="tab-bar" id="tabBar">
+            <button class="tab-btn active" data-tab="tab1">1. Abertura</button>
+            <button class="tab-btn" data-tab="tab2">2. Problema</button>
+            <button class="tab-btn" data-tab="tab3">3. Solução</button>
+            <button class="tab-btn" data-tab="tab4">4. Diferenciais</button>
+            <button class="tab-btn" data-tab="tab5">5. Público & impacto</button>
+            <button class="tab-btn" data-tab="tab6">6. Conclusão</button>
+        </div>
+
+        <!-- CONTEÚDO DAS ABAS -->
+        <div id="tab1" class="tab-content active">
+            <ul>
+                <li><strong>Boas-vindas:</strong> “Olá, meu nome é [seu nome] e hoje vou apresentar o projeto <strong>IncluVid</strong>.”</li>
+                <li><strong>Contexto:</strong> “Vivemos na era digital, mas nem todos são contemplados de forma igual. Pessoas autistas enfrentam barreiras únicas no uso de plataformas de vídeo.”</li>
+                <li><strong>Gancho:</strong> “E se existisse um aplicativo feito sob medida para elas? É isso que propomos.”</li>
+            </ul>
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <ul>
+                <li><strong>Dados:</strong> “Estudos mostram que a exclusão digital de autistas não é apenas falta de acesso, mas sim <strong>invisibilidade pedagógica</strong> e <strong>sobrecarga sensorial</strong>.”</li>
+                <li><strong>Exemplo concreto:</strong> “Interfaces poluídas, anúncios piscando, sons inesperados — tudo isso gera ansiedade e afasta o usuário.”</li>
+                <li><strong>Consequência:</strong> “Sem uma plataforma adequada, perde-se a oportunidade de aprendizado, lazer e conexão social.”</li>
+            </ul>
+        </div>
+
+        <div id="tab3" class="tab-content">
+            <ul>
+                <li><strong>O que é o IncluVid:</strong> “Um aplicativo mobile e web com curadoria de vídeos educativos, culturais e de entretenimento, <strong>exclusivamente para pessoas autistas</strong>.”</li>
+                <li><strong>Co-criação:</strong> “Desenvolvido em parceria com terapeutas, educadores e, principalmente, com adultos e jovens autistas.”</li>
+                <li><strong>Funcionalidade-chave:</strong> “Recomendação baseada em interesses fixos e possibilidade de assistir repetidamente sem interferências.”</li>
+            </ul>
+        </div>
+
+        <div id="tab4" class="tab-content">
+            <ul>
+                <li><strong>Design sensorial:</strong> “Paleta de cores suaves, sem flashes, e controle manual de brilho, contraste e som.”</li>
+                <li><strong>Navegação previsível:</strong> “Menu sempre no mesmo lugar, botões com ícones e textos juntos.”</li>
+                <li><strong>Recursos de acessibilidade:</strong> “Legendas, libras (em breve), áudio descrição e velocidade ajustável.”</li>
+                <li><strong>Comunidade segura:</strong> “Sem comentários públicos tóxicos — espaço moderado e acolhedor.”</li>
+            </ul>
+        </div>
+
+        <div id="tab5" class="tab-content">
+            <ul>
+                <li><strong>Público-alvo:</strong> “Crianças, adolescentes e adultos autistas de todos os níveis de suporte, além de familiares e profissionais.”</li>
+                <li><strong>Impacto esperado:</strong> “Redução da ansiedade digital, estímulo ao aprendizado autônomo e fortalecimento da identidade autista.”</li>
+                <li><strong>Alinhamento com ODS:</strong> “Contribuímos para o ODS 10 (Redução das Desigualdades) e ODS 4 (Educação de Qualidade).”</li>
+            </ul>
+        </div>
+
+        <div id="tab6" class="tab-content">
+            <ul>
+                <li><strong>Recapitulação:</strong> “O IncluVid não é apenas um app; é uma resposta à exclusão digital que afeta milhões.”</li>
+                <li><strong>Chamada à ação:</strong> “Convidamos investidores, parceiros e a comunidade a se juntar a nós nessa construção.”</li>
+                <li><strong>Encerramento:</strong> “Juntos, podemos transformar a experiência digital de pessoas autistas. Obrigado pela atenção.”</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== REFERÊNCIAS ===== -->
+    <section>
+        <h2>📚 Referências que embasam o projeto</h2>
+        <ul>
+            <li><strong>MWPT (Acessibilidade Digital)</strong> – Diretrizes para interfaces acessíveis a autistas.</li>
+            <li><strong>Editora Omni Scientia</strong> – “Exclusão digital de jovens autistas nível 3 de suporte”.</li>
+            <li><strong>Periodicorease (Conexões Digitais)</strong> – Relação entre autismo e tecnologias assistivas.</li>
+            <li><strong>EIT Health (Digi-ID PLUS)</strong> – Projeto europeu de plataforma de vídeo-educação co-criada.</li>
+        </ul>
+        <p class="ref-destaque">
+            ➡️ Essas fontes confirmam que a falta de uma plataforma dedicada <strong>é, sim, um problema de exclusão digital e direito humano</strong>.
+        </p>
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <div class="footer-note">
+        <p class="footer-flex">
+            <span>🧩 IncluVid – versão conceitual</span>
+            <button class="btn-demo" id="demoBtn">▶️ Simular navegação</button>
+        </p>
+        <p class="footer-direitos">
+            Projeto desenvolvido para fins de apresentação. Todos os direitos reservados.
+        </p>
+    </div>
+
+</div>
+
+<!-- Link para o JavaScript externo -->
+<script src="script.js"></script>
+</body>
+</html>
