@@ -1,61 +1,89 @@
-// Aguarda o DOM carregar completamente para garantir que todos os elementos existam
+// Aguarda o DOM carregar completamente
 document.addEventListener('DOMContentLoaded', function() {
+
+    // ===== MENU MOBILE =====
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+    }
 
     // ===== SISTEMA DE ABAS (roteiro) =====
     const tabs = document.querySelectorAll('.tab-btn');
     const contents = document.querySelectorAll('.tab-content');
 
-    tabs.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Remove a classe 'active' de todos os botões e conteúdos
-            tabs.forEach(b => b.classList.remove('active'));
-            contents.forEach(c => c.classList.remove('active'));
-
-            // Adiciona 'active' no botão clicado
-            this.classList.add('active');
-            const target = document.getElementById(this.dataset.tab);
-            if (target) {
-                target.classList.add('active');
-            }
-
-            // Atualiza atributos de acessibilidade ARIA
-            tabs.forEach(b => b.setAttribute('aria-selected', 'false'));
-            this.setAttribute('aria-selected', 'true');
-        });
-    });
-
-    // Inicializa o estado ARIA do primeiro botão
     if (tabs.length > 0) {
+        tabs.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active de todos
+                tabs.forEach(b => b.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                // Ativa o clicado
+                this.classList.add('active');
+                const target = document.getElementById(this.dataset.tab);
+                if (target) {
+                    target.classList.add('active');
+                }
+
+                // Atualiza ARIA
+                tabs.forEach(b => b.setAttribute('aria-selected', 'false'));
+                this.setAttribute('aria-selected', 'true');
+            });
+        });
+
+        // Inicializa ARIA
         tabs[0].setAttribute('aria-selected', 'true');
     }
 
-    // ===== MODO REDUZIDO (menos estímulos) =====
-    const switchBtn = document.getElementById('modoSwitch');
-    if (switchBtn) {
-        switchBtn.addEventListener('click', function() {
-            // Alterna a classe no body
-            document.body.classList.toggle('modo-reduzido');
-            // Alterna a classe 'active' no botão switch
-            const isActive = this.classList.toggle('active');
-            // Atualiza o atributo ARIA
-            this.setAttribute('aria-checked', isActive);
-        });
-    }
+    // ===== FORMULÁRIO DE CONTATO =====
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-    // ===== BOTÃO DEMO (simulação) =====
-    const demoBtn = document.getElementById('demoBtn');
-    if (demoBtn) {
-        demoBtn.addEventListener('click', function() {
-            alert('🧩 Demo conceitual: aqui seria aberta a tela inicial do app com vídeos recomendados, interface calma e opções de acessibilidade.');
+            // Simula envio
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
 
-            // Feedback visual temporário no botão
-            this.textContent = '✅ Simulado!';
-            this.style.background = '#2a7a4a';
+            btn.textContent = '✅ Enviado com sucesso!';
+            btn.style.background = '#2a7a4a';
+            btn.disabled = true;
+
+            // Limpa o formulário
+            this.reset();
+
             setTimeout(() => {
-                this.textContent = '▶️ Simular navegação';
-                this.style.background = '#1f4b74';
-            }, 2000);
+                btn.textContent = originalText;
+                btn.style.background = '#1f4b74';
+                btn.disabled = false;
+            }, 3000);
         });
     }
 
+    // ===== NAVEGAÇÃO SUAVE PARA LINKS INTERNOS =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // ===== FECHA MENU MOBILE AO CLICAR EM UM LINK =====
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navMenu) {
+                navMenu.classList.remove('active');
+            }
+        });
+    });
+
+    console.log('🧩 IncluVid — Projeto de inclusão digital para autistas');
+    console.log('📖 Versão completa com múltiplas páginas');
 });
