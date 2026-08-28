@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IncluVid – Contato</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">🧩 IncluVid</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="roteiro.html">Roteiro</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">☰</div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <header>
+            <h1>📬 Contato e equipe</h1>
+            <p class="subhead">Quer contribuir, fazer parte ou saber mais? Fale conosco!</p>
+        </header>
+
+        <!-- ===== EQUIPE ===== -->
+        <section>
+            <h2>👥 Nossa equipe</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">👩‍💻</div>
+                    <h4>Ana Silva</h4>
+                    <p><strong>Co-fundadora & UX/UI Designer</strong></p>
+                    <p>Especialista em design inclusivo e acessibilidade digital.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">🧑‍💻</div>
+                    <h4>Carlos Santos</h4>
+                    <p><strong>Co-fundador & Desenvolvedor</strong></p>
+                    <p>Engenheiro de software com foco em aplicações acessíveis.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">🧠</div>
+                    <h4>Marina Oliveira</h4>
+                    <p><strong>Consultora Autista</strong></p>
+                    <p>Ativista e consultora em neurodiversidade e inclusão digital.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">👨‍⚕️</div>
+                    <h4>Dr. Roberto Lima</h4>
+                    <p><strong>Consultor Clínico</strong></p>
+                    <p>Terapeuta ocupacional especializado em autismo e tecnologia.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FORMULÁRIO DE CONTATO ===== -->
+        <section>
+            <h2>✉️ Envie uma mensagem</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" placeholder="Seu nome" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required />
+                </div>
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <input type="text" id="assunto" placeholder="Assunto da mensagem" required />
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" rows="6" placeholder="Escreva sua mensagem
